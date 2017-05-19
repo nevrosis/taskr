@@ -9,7 +9,7 @@ Devise.setup do |config|
   #config.secret_key = 'efac52d6068583700581eedfe8fa8bfa034a76cfee6811ab7035a74e7b6f76cbb248b2167946085f6fdee66320d0adf5b566d298e46eb84fd614ea2d4fe35692'
   #config.secret_key = ENV[ 'DEVISE_TOKEN_AUTH_SECRET_KEY' ]
   #config.secret_key = ENV[ 'DEVISE_TOKEN_AUTH_SECRET_KEY' ]
-  config.secret_key = 'd1a0e4db40af6fd5474cc0e51f2ecab9d34242b734240ccd2be10457c64b0894426e81460b6176fe849dec7ea7ec0d890557460517e386b681cdca6d129e5077'
+  #config.secret_key = 'd1a0e4db40af6fd5474cc0e51f2ecab9d34242b734240ccd2be10457c64b0894426e81460b6176fe849dec7ea7ec0d890557460517e386b681cdca6d129e5077'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
