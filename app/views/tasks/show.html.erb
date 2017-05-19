@@ -1,0 +1,10 @@
+<h1>Showing task</h1>
+content:
+<br>
+<%= @task.content %>
+<br>
+<p>
+  <%= link_to 'Edit', edit_task_path(@task) %>
+  |
+  <%= link_to 'Task Listing', tasks_path %>
+</p>

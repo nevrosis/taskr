@@ -1,0 +1,19 @@
+<% if @task.errors.any? %>
+  <ul>
+  <% @task.errors.full_messages.each do |msg| %>
+  <li>
+    <%= msg %>
+  </li>
+  <% end %>
+</ul>
+<br>
+<% end %>
+
+<%= simple_form_for @task do |f| %>
+<%= f.input :content, required: true, autofocus: true %>
+<%= f.button :submit, "Update this task", class: 'btn btn-primary btn-block' %>
+<% end %>
+
+<p>
+  <%= link_to 'Task Listing', tasks_path %>
+</p>
