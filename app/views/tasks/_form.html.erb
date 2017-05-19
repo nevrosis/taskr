@@ -11,6 +11,7 @@
 
 <%= simple_form_for @task do |f| %>
 <%= f.input :content, required: true, autofocus: true %>
+<%= f.input :state, required: true %>
 <%= f.button :submit, "Update this task", class: 'btn btn-primary btn-block' %>
 <% end %>
 
