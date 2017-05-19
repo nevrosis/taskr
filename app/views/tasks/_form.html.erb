@@ -9,10 +9,10 @@
 <br>
 <% end %>
 
-<%= simple_form_for @task do |f| %>
+<%= simple_form_for @task, html: {class: 'form-signin'} do |f| %>
 <%= f.input :content, required: true, autofocus: true %>
 <%= f.input :state, required: true %>
-<%= f.button :submit, "Update this task", class: 'btn btn-primary btn-block' %>
+<%= f.button :submit, "Save task", class: 'btn btn-primary btn-block' %>
 <% end %>
 
 <p>

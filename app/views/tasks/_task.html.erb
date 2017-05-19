@@ -1,0 +1,28 @@
+<!--
+<tr>
+  <td><%= task.content %></td>
+  <td><%= task.state %></td>
+  <td><%= link_to 'Show', task_path(task) %></td>
+  <td><%= link_to 'Edit', edit_task_path(task) %></td>
+  <td><%= link_to 'Delete', task_path(task), method: :delete, data: {confirm: "delete?!?"} %></td>
+  <td><%= link_to 'Mark as To Do', change_state_task_path(task, state: "to_do"), method: :put %></td>
+  <td><%= link_to 'Mark as Doing', change_state_task_path(task, state: "doing"), method: :put %></td>
+  <td><%= link_to 'Mark as Done', change_state_task_path(task, state: "done"), method: :put %></td>
+</tr>
+-->
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <%= link_to edit_task_path(task) do %>
+      Created: <%= time_ago_in_words(task.created_at) %> ago
+    <% end %>
+    <%= link_to 'X', task_path(task), method: :delete, data: {confirm: "delete?!?"}, class: 'pull-right'  %>
+  </div>
+  <div class="panel-body"><%= raw(task.content_html) %></div>
+  <div class="panel-footer">
+    Mark as: <br>
+    <%= link_to '<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> To Do'.html_safe, change_state_task_path(task, state: "to_do"), method: :put %> |
+    <%= link_to 'Doing'.html_safe, change_state_task_path(task, state: "doing"), method: :put %> |
+    <%= link_to 'Done <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>'.html_safe, change_state_task_path(task, state: "done"), method: :put %>
+</div>
+</div>
